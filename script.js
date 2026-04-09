@@ -72,12 +72,15 @@ document.querySelectorAll('.quote-line[data-reveal]').forEach((el, i) => {
   revealObserver.observe(el);
 });
 
-/* ── SERVICES CAROUSEL ───────────────────── */
-(function initCarousel(trackId, prevId, nextId, dotsId) {
+/* ── CAROUSEL FACTORY ────────────────────── */
+function initCarousel(trackId, prevId, nextId, dotsId, cardSelector) {
   const track = document.getElementById(trackId);
   if (!track) return;
 
-  const cards = track.querySelectorAll('.service-card');
+  const selector = cardSelector || '.service-card, .info-card';
+  const cards = track.querySelectorAll(selector.split(',').map(s => s.trim()).join(','));
+  if (!cards.length) return;
+
   const prevBtn = document.getElementById(prevId);
   const nextBtn = document.getElementById(nextId);
   const dotsContainer = document.getElementById(dotsId);
@@ -89,23 +92,23 @@ document.querySelectorAll('.quote-line[data-reveal]').forEach((el, i) => {
     if (window.innerWidth < 1200) return 3;
     return 4;
   };
-
   const maxIndex = () => Math.max(0, cards.length - visibleCount());
 
-  // Build dots
   const buildDots = () => {
+    if (!dotsContainer) return;
     dotsContainer.innerHTML = '';
     const count = maxIndex() + 1;
     for (let i = 0; i < count; i++) {
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
-      dot.setAttribute('aria-label', `Slide ${i+1}`);
+      dot.setAttribute('aria-label', `Slide ${i + 1}`);
       dot.addEventListener('click', () => goTo(i));
       dotsContainer.appendChild(dot);
     }
   };
 
   const updateDots = () => {
+    if (!dotsContainer) return;
     dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
       d.classList.toggle('active', i === currentIndex);
     });
@@ -113,7 +116,8 @@ document.querySelectorAll('.quote-line[data-reveal]').forEach((el, i) => {
 
   const goTo = (index) => {
     currentIndex = Math.max(0, Math.min(index, maxIndex()));
-    const cardWidth = cards[0].offsetWidth + 24; // gap 1.5rem
+    const gap = 24; // 1.5rem
+    const cardWidth = cards[0].offsetWidth + gap;
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     updateDots();
   };
@@ -124,16 +128,31 @@ document.querySelectorAll('.quote-line[data-reveal]').forEach((el, i) => {
   buildDots();
   window.addEventListener('resize', () => { buildDots(); goTo(Math.min(currentIndex, maxIndex())); });
 
-  // Touch/drag support
+  // Touch / drag
   let startX = 0, isDragging = false;
   track.addEventListener('mousedown',  e => { isDragging = true; startX = e.pageX; });
   track.addEventListener('mousemove',  e => { if (isDragging) e.preventDefault(); });
-  track.addEventListener('mouseup',    e => { if (!isDragging) return; isDragging = false; const diff = startX - e.pageX; if (Math.abs(diff) > 50) goTo(diff > 0 ? currentIndex + 1 : currentIndex - 1); });
+  track.addEventListener('mouseup',    e => { if (!isDragging) return; isDragging = false; const d = startX - e.pageX; if (Math.abs(d) > 50) goTo(d > 0 ? currentIndex + 1 : currentIndex - 1); });
   track.addEventListener('mouseleave', ()  => { isDragging = false; });
   track.addEventListener('touchstart', e => { startX = e.touches[0].pageX; }, { passive: true });
-  track.addEventListener('touchend',   e => { const diff = startX - e.changedTouches[0].pageX; if (Math.abs(diff) > 50) goTo(diff > 0 ? currentIndex + 1 : currentIndex - 1); }, { passive: true });
+  track.addEventListener('touchend',   e => { const d = startX - e.changedTouches[0].pageX; if (Math.abs(d) > 50) goTo(d > 0 ? currentIndex + 1 : currentIndex - 1); }, { passive: true });
+}
 
-})('servicesTrack', 'servicesPrev', 'servicesNext', 'servicesDots');
+/* ── INIT ALL CAROUSELS ──────────────────── */
+// Services
+initCarousel('servicesTrack', 'servicesPrev', 'servicesNext', 'servicesDots', '.service-card');
+
+// Why This Is Needed — both style variants
+initCarousel('whyTrackA', 'whyPrevA', 'whyNextA', 'whyDotsA', '.info-card');
+initCarousel('whyTrackB', 'whyPrevB', 'whyNextB', 'whyDotsB', '.info-card');
+
+// How We Help — both style variants
+initCarousel('howTrackA', 'howPrevA', 'howNextA', 'howDotsA', '.info-card');
+initCarousel('howTrackB', 'howPrevB', 'howNextB', 'howDotsB', '.info-card');
+
+// Partner options — both style variants (partner.html)
+initCarousel('partnerTrackA', 'partnerPrevA', 'partnerNextA', 'partnerDotsA', '.info-card');
+initCarousel('partnerTrackB', 'partnerPrevB', 'partnerNextB', 'partnerDotsB', '.info-card');
 
 /* ── 3D TILT EFFECT ──────────────────────── */
 function applyTilt(selector) {
@@ -150,9 +169,7 @@ function applyTilt(selector) {
   });
 }
 applyTilt('.service-card');
-applyTilt('.why-card');
-applyTilt('.how-card');
-applyTilt('.partner-card');
+applyTilt('.info-card');
 applyTilt('.collage-card');
 
 /* ── PARALLAX HERO ORBS ──────────────────── */
