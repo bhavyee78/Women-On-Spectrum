@@ -11,9 +11,6 @@
 </head>
 <body>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor-glow" id="cursorGlow"></div>
-
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -34,71 +31,15 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════
-       HERO
-  ════════════════════════════════════════ -->
+  <!-- HERO — video background -->
   <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-orb hero-orb-3"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-collage">
-        <div class="collage-card c1">
-          <div class="collage-inner">
-            <div class="collage-icon">🎓</div>
-            <span>Education</span>
-          </div>
-        </div>
-        <div class="collage-card c2">
-          <div class="collage-inner">
-            <div class="collage-icon">💼</div>
-            <span>Career</span>
-          </div>
-        </div>
-        <div class="collage-card c3">
-          <div class="collage-inner">
-            <div class="collage-icon">❤️</div>
-            <span>Health</span>
-          </div>
-        </div>
-        <div class="collage-card c4">
-          <div class="collage-inner">
-            <div class="collage-icon">🤝</div>
-            <span>Community</span>
-          </div>
-        </div>
-        <div class="collage-card c5">
-          <div class="collage-inner">
-            <div class="collage-icon">🌟</div>
-            <span>Mentoring</span>
-          </div>
-        </div>
-        <div class="collage-card c6">
-          <div class="collage-inner">
-            <div class="collage-icon">🔬</div>
-            <span>Research</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+      <source src="Video/Create_a_premium_cinematic_.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge">Empowering Neurodivergent Women</div>
-      <h1 class="hero-title">
-        <span class="line-reveal">Women on</span>
-        <span class="line-reveal delay-1">the Spectrum</span>
-      </h1>
-      <p class="hero-sub line-reveal delay-2">
-        Enabling women to thrive in education, employment, healthcare, and everyday life.
-      </p>
-      <div class="hero-actions line-reveal delay-3">
-        <a href="#signup" class="btn-primary">Join the Community</a>
-        <a href="#services" class="btn-ghost">Explore Services</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll to explore</span>
-      <div class="scroll-arrow"></div>
+      <h1 class="hero-title">Women on the Spectrum</h1>
+      <a href="#signup" class="btn-primary">Join the Community</a>
     </div>
   </section>
 
@@ -106,97 +47,202 @@
        SERVICES CAROUSEL
   ════════════════════════════════════════ -->
   <section class="services-section" id="services">
-    <div class="section-header reveal-up">
-      <div class="section-tag">What We Offer</div>
-      <h2>Our Services</h2>
-      <p>Designed around the real needs of neurodivergent women</p>
-    </div>
 
-    <div class="carousel-wrapper">
-      <div class="carousel-track" id="servicesTrack">
+    <!-- Style A — White / #4A3F45 text (no hover) -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style A — White</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="servicesTrackA">
 
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#6b5060,#4A3F45);">
-            <div class="service-icon">🎶</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Social Events</h3>
             <p>From music, comedy, games nights and more!</p>
             <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#4d6b5a,#2e4d3d);">
-            <div class="service-icon">🌱</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Mentoring</h3>
             <p>Small group seminars with successful Neurodivergent women, helping you to build confidence while learning how to successfully navigate in life, careers and socially.</p>
-            <a href="#signup" class="card-cta">Find a Mentor</a>
+            <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#5a4d6b,#3d2e4d);">
-            <div class="service-icon">🏥</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Health Assessments</h3>
-            <p>Our clinicians specialise in women's health. You will be seen and you will be heard with us. <em>#healthfirst</em></p>
-            <a href="#signup" class="card-cta">Book Now</a>
+            <p>Our clinicians specialise in women's health. You will be seen and you will be heard with us. #healthfirst</p>
+            <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#6b604d,#4d452e);">
-            <div class="service-icon">🌍</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Community Projects</h3>
             <p>Help us support young girls and families in our local communities.</p>
             <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#4d6b68,#2e4d4a);">
-            <div class="service-icon">💬</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Building Peer Networks</h3>
             <p>Building a supportive community of women at similar stages in life, gain knowledge, advice and share resources.</p>
-            <a href="#signup" class="card-cta">Join Network</a>
+            <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#4d5a6b,#2e3d4d);">
-            <div class="service-icon">🏢</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Workplace Training</h3>
             <p>We educate companies, making sure they create safe and productive spaces for Neurodivergent women.</p>
-            <a href="#signup" class="card-cta">Learn More</a>
+            <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-bg" style="background: linear-gradient(135deg,#6b4d52,#4d2e32);">
-            <div class="service-icon">📣</div>
-          </div>
-          <div class="service-content">
+          <div class="info-card info-light">
             <h3>Advocacy</h3>
             <p>Help us raise awareness, campaign, protest — anything to help people and organisations make a positive change.</p>
             <a href="#signup" class="card-cta">Get Involved</a>
           </div>
-        </div>
 
+        </div>
+        <button class="carousel-btn prev" id="servicesPrevA" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="servicesNextA" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="servicesDotsA"></div>
       </div>
-      <button class="carousel-btn prev" id="servicesPrev" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="servicesNext" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="servicesDots"></div>
     </div>
+
+    <!-- Style B — #A8B5A2 / #F7F5F2 text (no hover) -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style B — Sage</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="servicesTrackB">
+
+          <div class="info-card info-green">
+            <h3>Social Events</h3>
+            <p>From music, comedy, games nights and more!</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+          <div class="info-card info-green">
+            <h3>Mentoring</h3>
+            <p>Small group seminars with successful Neurodivergent women, helping you to build confidence while learning how to successfully navigate in life, careers and socially.</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+          <div class="info-card info-green">
+            <h3>Health Assessments</h3>
+            <p>Our clinicians specialise in women's health. You will be seen and you will be heard with us. #healthfirst</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+          <div class="info-card info-green">
+            <h3>Community Projects</h3>
+            <p>Help us support young girls and families in our local communities.</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+          <div class="info-card info-green">
+            <h3>Building Peer Networks</h3>
+            <p>Building a supportive community of women at similar stages in life, gain knowledge, advice and share resources.</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+          <div class="info-card info-green">
+            <h3>Workplace Training</h3>
+            <p>We educate companies, making sure they create safe and productive spaces for Neurodivergent women.</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+          <div class="info-card info-green">
+            <h3>Advocacy</h3>
+            <p>Help us raise awareness, campaign, protest — anything to help people and organisations make a positive change.</p>
+            <a href="#signup" class="card-cta card-cta-on-green">Get Involved</a>
+          </div>
+
+        </div>
+        <button class="carousel-btn prev" id="servicesPrevB" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="servicesNextB" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="servicesDotsB"></div>
+      </div>
+    </div>
+
+    <!-- Style C — Image cards with hover effect -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style C — Image Cards</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="servicesTrackC">
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b5060">
+              <span class="s3-ph">Image: social-events.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Social Events</h3>
+                <p>From music, comedy, games nights and more!</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d6b5a">
+              <span class="s3-ph">Image: mentoring.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Mentoring</h3>
+                <p>Small group seminars with successful Neurodivergent women, helping you to build confidence while learning how to successfully navigate in life, careers and socially.</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#5a4d6b">
+              <span class="s3-ph">Image: health-assessments.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Health Assessments</h3>
+                <p>Our clinicians specialise in women's health. You will be seen and you will be heard with us. #healthfirst</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b604d">
+              <span class="s3-ph">Image: community-projects.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Community Projects</h3>
+                <p>Help us support young girls and families in our local communities.</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d6b68">
+              <span class="s3-ph">Image: peer-networks.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Building Peer Networks</h3>
+                <p>Building a supportive community of women at similar stages in life, gain knowledge, advice and share resources.</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d5a6b">
+              <span class="s3-ph">Image: workplace-training.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Workplace Training</h3>
+                <p>We educate companies, making sure they create safe and productive spaces for Neurodivergent women.</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b4d52">
+              <span class="s3-ph">Image: advocacy.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Advocacy</h3>
+                <p>Help us raise awareness, campaign, protest — anything to help people and organisations make a positive change.</p>
+                <a href="#signup" class="card-cta">Get Involved</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-btn prev" id="servicesPrevC" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="servicesNextC" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="servicesDotsC"></div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════
@@ -204,175 +250,283 @@
   ════════════════════════════════════════ -->
   <section class="quotes-section" id="quotes">
     <div class="quotes-inner">
-      <div class="quote-line" data-reveal>
-        Women on the spectrum — enabling women to thrive in education, employment, healthcare, and everyday life.
-      </div>
-      <div class="quote-line" data-reveal>
-        Undiagnosed or diagnosed, it's ok!
-      </div>
-      <div class="quote-line" data-reveal>
-        Join our community where you'll be seen, heard, and valued.
-      </div>
-      <div class="quote-line" data-reveal>
-        Together, we create safer, more equitable spaces for women. With us, you'll belong.
-      </div>
+      <div class="quote-line" data-reveal>Women on the spectrum — enabling women to thrive in education, employment, healthcare, and everyday life.</div>
+      <div class="quote-line" data-reveal>Undiagnosed or diagnosed, it's ok!</div>
+      <div class="quote-line" data-reveal>Join our community where you'll be seen, heard, and valued.</div>
+      <div class="quote-line" data-reveal>Together, we create safer, more equitable spaces for women. With us, you'll belong.</div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       WHY THIS IS NEEDED — dual carousel comparison
+       WHY THIS IS NEEDED
   ════════════════════════════════════════ -->
   <section class="why-section" id="why">
     <div class="section-header reveal-up">
-      <div class="section-tag">The Reality</div>
       <h2>Why This Is Needed</h2>
-      <p>Systemic gaps that demand urgent, compassionate action</p>
     </div>
 
-    <!-- Style A: White / #4A3F45 text -->
-    
-    <div class="carousel-wrapper reveal-up">
-      <div class="carousel-track" id="whyTrackA">
-        <div class="info-card info-light">
-          <div class="info-icon">📚</div>
-          <h3>Education</h3>
-          <p>Girls often mask challenges, appearing socially compliant while trying to cope internally, leading to overlooked learning needs. Our educators are able to upskill and develop organisations, reframe perspectives, allowing for a safer, more equitable space for women.</p>
+    <!-- Style A -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style A — White</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="whyTrackA">
+
+          <div class="info-card info-light">
+            <h3>Education</h3>
+            <p>Girls often mask challenges, appearing socially compliant while trying to cope internally, leading to overlooked learning needs. Our educators are able to upskill and develop organisations, reframe perspectives, allowing for a safer, more equitable space for women.</p>
+          </div>
+          <div class="info-card info-light">
+            <h3>Health</h3>
+            <p>Late recognition of neurodivergent women is usually down to misdiagnosis, confusing it with anxiety, depression, eating disorders, burnout and more. Hormonal transitions like menstruation, pregnancy, and menopause, intersect uniquely with neurodivergence but remain under-researched. Our clinicians specialise in assessing neurodivergent women. Your health is safer with us.</p>
+          </div>
+          <div class="info-card info-light">
+            <h3>Work &amp; Society</h3>
+            <p>Women on the Spectrum who are undiagnosed or late-diagnosed lead to compounded employment challenges, missed career opportunities and even leading to unemployment. Our mentoring and seminar sessions aim to provide women with a fairer chance at succeeding at work.</p>
+          </div>
+          <div class="info-card info-light">
+            <h3>Social</h3>
+            <p>Women are more likely to be misunderstood, mislabelled, or under-supported, often leading to loneliness. Our social events &amp; peer networking sessions bring women on the spectrum together, like-minded people building relationships that last!</p>
+          </div>
+
         </div>
-        <div class="info-card info-light">
-          <div class="info-icon">🩺</div>
-          <h3>Health</h3>
-          <p>Late recognition of neurodivergent women is usually down to misdiagnosis, confusing it with anxiety, depression, eating disorders, burnout and more. Hormonal transitions like menstruation, pregnancy, and menopause, intersect uniquely with neurodivergence but remain under-researched. Our clinicians specialise in assessing neurodivergent women. Your health is safer with us.</p>
-        </div>
-        <div class="info-card info-light">
-          <div class="info-icon">💼</div>
-          <h3>Work &amp; Society</h3>
-          <p>Women on the Spectrum who are undiagnosed or late-diagnosed lead to compounded employment challenges, missed career opportunities and even leading to unemployment. Our mentoring and seminar sessions aim to provide women with a fairer chance at succeeding at work.</p>
-        </div>
-        <div class="info-card info-light">
-          <div class="info-icon">🌸</div>
-          <h3>Social</h3>
-          <p>Women are more likely to be misunderstood, mislabelled, or under-supported, often leading to loneliness. Our social events &amp; peer networking sessions bring women on the spectrum together, like-minded people building relationships that last!</p>
-        </div>
+        <button class="carousel-btn prev" id="whyPrevA" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="whyNextA" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="whyDotsA"></div>
       </div>
-      <button class="carousel-btn prev" id="whyPrevA" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="whyNextA" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="whyDotsA"></div>
     </div>
 
-    <!-- Style B: #A8B5A2 / #F7F5F2 text -->
-    
-    <div class="carousel-wrapper reveal-up">
-      <div class="carousel-track" id="whyTrackB">
-        <div class="info-card info-green">
-          <div class="info-icon">📚</div>
-          <h3>Education</h3>
-          <p>Girls often mask challenges, appearing socially compliant while trying to cope internally, leading to overlooked learning needs. Our educators are able to upskill and develop organisations, reframe perspectives, allowing for a safer, more equitable space for women.</p>
+    <!-- Style B -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style B — Sage</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="whyTrackB">
+
+          <div class="info-card info-green">
+            <h3>Education</h3>
+            <p>Girls often mask challenges, appearing socially compliant while trying to cope internally, leading to overlooked learning needs. Our educators are able to upskill and develop organisations, reframe perspectives, allowing for a safer, more equitable space for women.</p>
+          </div>
+          <div class="info-card info-green">
+            <h3>Health</h3>
+            <p>Late recognition of neurodivergent women is usually down to misdiagnosis, confusing it with anxiety, depression, eating disorders, burnout and more. Hormonal transitions like menstruation, pregnancy, and menopause, intersect uniquely with neurodivergence but remain under-researched. Our clinicians specialise in assessing neurodivergent women. Your health is safer with us.</p>
+          </div>
+          <div class="info-card info-green">
+            <h3>Work &amp; Society</h3>
+            <p>Women on the Spectrum who are undiagnosed or late-diagnosed lead to compounded employment challenges, missed career opportunities and even leading to unemployment. Our mentoring and seminar sessions aim to provide women with a fairer chance at succeeding at work.</p>
+          </div>
+          <div class="info-card info-green">
+            <h3>Social</h3>
+            <p>Women are more likely to be misunderstood, mislabelled, or under-supported, often leading to loneliness. Our social events &amp; peer networking sessions bring women on the spectrum together, like-minded people building relationships that last!</p>
+          </div>
+
         </div>
-        <div class="info-card info-green">
-          <div class="info-icon">🩺</div>
-          <h3>Health</h3>
-          <p>Late recognition of neurodivergent women is usually down to misdiagnosis, confusing it with anxiety, depression, eating disorders, burnout and more. Hormonal transitions like menstruation, pregnancy, and menopause, intersect uniquely with neurodivergence but remain under-researched. Our clinicians specialise in assessing neurodivergent women. Your health is safer with us.</p>
-        </div>
-        <div class="info-card info-green">
-          <div class="info-icon">💼</div>
-          <h3>Work &amp; Society</h3>
-          <p>Women on the Spectrum who are undiagnosed or late-diagnosed lead to compounded employment challenges, missed career opportunities and even leading to unemployment. Our mentoring and seminar sessions aim to provide women with a fairer chance at succeeding at work.</p>
-        </div>
-        <div class="info-card info-green">
-          <div class="info-icon">🌸</div>
-          <h3>Social</h3>
-          <p>Women are more likely to be misunderstood, mislabelled, or under-supported, often leading to loneliness. Our social events &amp; peer networking sessions bring women on the spectrum together, like-minded people building relationships that last!</p>
-        </div>
+        <button class="carousel-btn prev" id="whyPrevB" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="whyNextB" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="whyDotsB"></div>
       </div>
-      <button class="carousel-btn prev" id="whyPrevB" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="whyNextB" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="whyDotsB"></div>
     </div>
+
+    <!-- Style C -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style C — Image Cards</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="whyTrackC">
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#5a5060">
+              <span class="s3-ph">Image: education-section.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Education</h3>
+                <p>Girls often mask challenges, appearing socially compliant while trying to cope internally, leading to overlooked learning needs. Our educators are able to upskill and develop organisations, reframe perspectives, allowing for a safer, more equitable space for women.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d5a52">
+              <span class="s3-ph">Image: health-section.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Health</h3>
+                <p>Late recognition of neurodivergent women is usually down to misdiagnosis, confusing it with anxiety, depression, eating disorders, burnout and more. Hormonal transitions like menstruation, pregnancy, and menopause, intersect uniquely with neurodivergence but remain under-researched. Our clinicians specialise in assessing neurodivergent women. Your health is safer with us.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#50505a">
+              <span class="s3-ph">Image: workplace-section.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Work &amp; Society</h3>
+                <p>Women on the Spectrum who are undiagnosed or late-diagnosed lead to compounded employment challenges, missed career opportunities and even leading to unemployment. Our mentoring and seminar sessions aim to provide women with a fairer chance at succeeding at work.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#5a4d55">
+              <span class="s3-ph">Image: social-section.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Social</h3>
+                <p>Women are more likely to be misunderstood, mislabelled, or under-supported, often leading to loneliness. Our social events &amp; peer networking sessions bring women on the spectrum together, like-minded people building relationships that last!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-btn prev" id="whyPrevC" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="whyNextC" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="whyDotsC"></div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════
-       HOW WE HELP — dual carousel comparison
+       HOW WE HELP
   ════════════════════════════════════════ -->
   <section class="how-section" id="how">
     <div class="section-header reveal-up">
-      <div class="section-tag">Our Approach</div>
       <h2>How We Help</h2>
-      <p>Practical, research-backed support for every stage of life</p>
     </div>
 
-    <!-- Style A: White -->
-    
-    <div class="carousel-wrapper reveal-up">
-      <div class="carousel-track" id="howTrackA">
-        <div class="info-card info-light">
-          <div class="info-num">01</div>
-          <h3>Employability &amp; Career</h3>
-          <p>Focused employability opportunities, networking and career oriented events to help women on the spectrum find careers that suits your mind with employers who value your mind.</p>
+    <!-- Style A -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style A — White</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="howTrackA">
+
+          <div class="info-card info-light">
+            <div class="info-num">01</div>
+            <p>Focused employability opportunities, networking and career oriented events to help women on the spectrum find careers that suits your mind with employers who value your mind.</p>
+          </div>
+          <div class="info-card info-light">
+            <div class="info-num">02</div>
+            <p>Tailored wellbeing support programs for neurodivergent women.</p>
+          </div>
+          <div class="info-card info-light">
+            <div class="info-num">03</div>
+            <p>Workshops for workplaces, educators, and healthcare providers on masking, mental health, and menopause.</p>
+          </div>
+          <div class="info-card info-light">
+            <div class="info-num">04</div>
+            <p>Research-backed content for families, HR teams, and clinicians.</p>
+          </div>
+          <div class="info-card info-light">
+            <div class="info-num">05</div>
+            <p>Community building through social events, peer networks, mentorship, and advocacy.</p>
+          </div>
+
         </div>
-        <div class="info-card info-light">
-          <div class="info-num">02</div>
-          <h3>Wellbeing Support</h3>
-          <p>Tailored wellbeing support programs for neurodivergent women.</p>
-        </div>
-        <div class="info-card info-light">
-          <div class="info-num">03</div>
-          <h3>Workshops &amp; Education</h3>
-          <p>Workshops for workplaces, educators, and healthcare providers on masking, mental health, and menopause.</p>
-        </div>
-        <div class="info-card info-light">
-          <div class="info-num">04</div>
-          <h3>Research-Backed Resources</h3>
-          <p>Research-backed content for families, HR teams, and clinicians.</p>
-        </div>
-        <div class="info-card info-light">
-          <div class="info-num">05</div>
-          <h3>Community Building</h3>
-          <p>Community building through social events, peer networks, mentorship, and advocacy.</p>
-        </div>
+        <button class="carousel-btn prev" id="howPrevA" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="howNextA" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="howDotsA"></div>
       </div>
-      <button class="carousel-btn prev" id="howPrevA" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="howNextA" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="howDotsA"></div>
     </div>
 
-    <!-- Style B: Green -->
-    
-    <div class="carousel-wrapper reveal-up">
-      <div class="carousel-track" id="howTrackB">
-        <div class="info-card info-green">
-          <div class="info-num">01</div>
-          <h3>Employability &amp; Career</h3>
-          <p>Focused employability opportunities, networking and career oriented events to help women on the spectrum find careers that suits your mind with employers who value your mind.</p>
+    <!-- Style B -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style B — Sage</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="howTrackB">
+
+          <div class="info-card info-green">
+            <div class="info-num">01</div>
+            <p>Focused employability opportunities, networking and career oriented events to help women on the spectrum find careers that suits your mind with employers who value your mind.</p>
+          </div>
+          <div class="info-card info-green">
+            <div class="info-num">02</div>
+            <p>Tailored wellbeing support programs for neurodivergent women.</p>
+          </div>
+          <div class="info-card info-green">
+            <div class="info-num">03</div>
+            <p>Workshops for workplaces, educators, and healthcare providers on masking, mental health, and menopause.</p>
+          </div>
+          <div class="info-card info-green">
+            <div class="info-num">04</div>
+            <p>Research-backed content for families, HR teams, and clinicians.</p>
+          </div>
+          <div class="info-card info-green">
+            <div class="info-num">05</div>
+            <p>Community building through social events, peer networks, mentorship, and advocacy.</p>
+          </div>
+
         </div>
-        <div class="info-card info-green">
-          <div class="info-num">02</div>
-          <h3>Wellbeing Support</h3>
-          <p>Tailored wellbeing support programs for neurodivergent women.</p>
-        </div>
-        <div class="info-card info-green">
-          <div class="info-num">03</div>
-          <h3>Workshops &amp; Education</h3>
-          <p>Workshops for workplaces, educators, and healthcare providers on masking, mental health, and menopause.</p>
-        </div>
-        <div class="info-card info-green">
-          <div class="info-num">04</div>
-          <h3>Research-Backed Resources</h3>
-          <p>Research-backed content for families, HR teams, and clinicians.</p>
-        </div>
-        <div class="info-card info-green">
-          <div class="info-num">05</div>
-          <h3>Community Building</h3>
-          <p>Community building through social events, peer networks, mentorship, and advocacy.</p>
-        </div>
+        <button class="carousel-btn prev" id="howPrevB" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="howNextB" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="howDotsB"></div>
       </div>
-      <button class="carousel-btn prev" id="howPrevB" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="howNextB" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="howDotsB"></div>
     </div>
+
+    <!-- Style C -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style C — Image Cards</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="howTrackC">
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d5a6b">
+              <span class="s3-ph">Image: employability-support.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <p>Focused employability opportunities, networking and career oriented events to help women on the spectrum find careers that suits your mind with employers who value your mind.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d6b5a">
+              <span class="s3-ph">Image: wellbeing-support.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <p>Tailored wellbeing support programs for neurodivergent women.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b604d">
+              <span class="s3-ph">Image: workplace-workshops.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <p>Workshops for workplaces, educators, and healthcare providers on masking, mental health, and menopause.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#5a4d6b">
+              <span class="s3-ph">Image: research-content.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <p>Research-backed content for families, HR teams, and clinicians.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b5060">
+              <span class="s3-ph">Image: community-building.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <p>Community building through social events, peer networks, mentorship, and advocacy.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-btn prev" id="howPrevC" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="howNextC" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="howDotsC"></div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════
-       EMAIL SIGN-UP  (gold border — C8A96A)
+       EMAIL SIGN-UP (gold border — C8A96A)
   ════════════════════════════════════════ -->
   <section class="signup-section" id="signup">
     <div class="signup-bg">
@@ -380,9 +534,7 @@
       <div class="signup-orb s2"></div>
     </div>
     <div class="signup-inner reveal-up">
-      <div class="section-tag">Stay Connected</div>
       <h2>Join the Community Today</h2>
-      <p>Be the first to hear about events, resources, and opportunities — built for and by neurodivergent women.</p>
       <form class="signup-form" id="signupForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="form-row">
           <input type="text" name="name" placeholder="Your Name" required class="form-input" />
@@ -390,7 +542,6 @@
         </div>
         <button type="submit" class="btn-signup-gold">Join the Community</button>
       </form>
-      <p class="signup-note">No spam. Unsubscribe anytime. We value your privacy.</p>
     </div>
   </section>
 
@@ -400,23 +551,16 @@
   <section class="closing-section">
     <div class="closing-inner reveal-up">
       <blockquote class="closing-quote">
-        "This is more than an event; it is a platform for systemic improvement. Together, we can create safer, fairer, and more equitable systems for women on the spectrum."
+        This is more than an event; it is a platform for systemic improvement. Together, we can create safer, fairer, and more equitable systems for women on the spectrum.
       </blockquote>
-      <div class="closing-ctas">
-        <a href="#signup" class="btn-primary">Join Us</a>
-        <a href="partner.html" class="btn-ghost">Partner With Us</a>
-      </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="footer-logo">Women on the Spectrum</span>
-        <p>Enabling neurodivergent women to thrive.</p>
       </div>
       <div class="footer-links">
         <a href="#home">Home</a>
@@ -429,15 +573,11 @@
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════
-       JOIN COMMUNITY POPUP  (gold border — C8A96A, #4A3F45 bg, #F7F5F2 text)
-  ════════════════════════════════════════ -->
+  <!-- JOIN COMMUNITY POPUP (gold border — C8A96A, #4A3F45 bg, #F7F5F2 writing) -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-box">
       <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-      <div class="section-tag">Join Us</div>
       <h2>Join the Community</h2>
-      <p>Sign up to access events, resources, and a community that truly understands.</p>
       <form class="signup-form modal-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input type="text" name="name" placeholder="Your Name" required class="form-input" />
         <input type="email" name="email" placeholder="Your Email" required class="form-input" />

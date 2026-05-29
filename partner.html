@@ -11,8 +11,6 @@
 </head>
 <body>
 
-  <div class="cursor-glow" id="cursorGlow"></div>
-
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -33,202 +31,217 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════
-       HERO
-  ════════════════════════════════════════ -->
-  <section class="partner-hero hero">
-    <div class="hero-bg">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-grid"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">Make a Difference</div>
-      <h1 class="hero-title">
-        <span class="line-reveal">Join Us in Empowering</span>
-        <span class="line-reveal delay-1">Women on the Spectrum</span>
-      </h1>
-      <p class="hero-sub line-reveal delay-2">
-        Your support enables women to thrive in education, employment, healthcare, and everyday life.
-      </p>
-      <div class="hero-actions line-reveal delay-3">
-        <a href="#partner-form" class="btn-primary">Become a Partner</a>
-        <a href="#partner-options" class="btn-ghost">Explore Options</a>
-      </div>
+  <!-- HERO -->
+  <section class="hero partner-hero" style="min-height:60vh;background:#4A3F45;">
+    <div class="hero-content" style="padding-top:6rem;">
+      <h1 class="hero-title">Join Us in Empowering Women on the Spectrum</h1>
+      <p class="partner-hero-sub">Your support enables women to thrive in education, employment, healthcare, and everyday life.</p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       PARTNER OPTIONS — dual carousel comparison
+       PARTNER WITH US THROUGH
   ════════════════════════════════════════ -->
   <section class="partner-options-section" id="partner-options">
     <div class="section-header reveal-up">
-      <div class="section-tag">Partnership Types</div>
       <h2>Partner With Us Through</h2>
-      <p>Choose the collaboration model that suits your organisation's goals and values</p>
     </div>
 
-    <!-- Style A: White / #4A3F45 -->
-    <div class="style-label reveal-up">Style A — White background · #4A3F45 text</div>
-    <div class="carousel-wrapper reveal-up">
-      <div class="carousel-track" id="partnerTrackA">
+    <!-- Style A — White / #4A3F45 text (no hover) -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style A — White</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="partnerTrackA">
 
-        <div class="info-card info-light">
-          <div class="info-icon">🎪</div>
-          <h3>Event Sponsorship</h3>
-          <p>Help us scale across the UK and beyond. If you have offices in multiple countries then help us launch an event in each country. Your support here will be a massive help in supporting neurodivergent women.</p>
-          <a href="#partner-form" class="card-cta">Get Started</a>
+          <div class="info-card info-light">
+            <h3>Event Sponsorship</h3>
+            <p>Help us scale across the UK and beyond. If you have offices in multiple countries then help us launch an event in each country. Your support here will be a massive help in supporting neurodivergent women.</p>
+            <a href="#partner-form" class="card-cta">Get Started</a>
+          </div>
+
+          <div class="info-card info-light">
+            <h3>Workshop and Program Partnerships</h3>
+            <!-- TODO: Add description from brief -->
+            <a href="#partner-form" class="card-cta">Get Started</a>
+          </div>
+
+          <div class="info-card info-light">
+            <h3>Amplifying Our Mission on Social Media</h3>
+            <!-- TODO: Add description from brief -->
+            <a href="#partner-form" class="card-cta">Get Started</a>
+          </div>
+
+          <div class="info-card info-light">
+            <h3>Research and Policy Collaboration</h3>
+            <p>Help fund our research initiatives or help us lobby for policy change.</p>
+            <a href="#partner-form" class="card-cta">Get Started</a>
+          </div>
+
         </div>
-
-        <div class="info-card info-light">
-          <div class="info-icon">🛠</div>
-          <h3>Workshop &amp; Programme Partnerships</h3>
-          <p>Co-create and deliver workshops and programmes that bring your expertise directly to neurodivergent women, their employers, and healthcare providers.</p>
-          <a href="#partner-form" class="card-cta">Get Started</a>
-        </div>
-
-        <div class="info-card info-light">
-          <div class="info-icon">📱</div>
-          <h3>Amplifying Our Mission on Social Media</h3>
-          <p>Use your platform to reach thousands — sharing stories, raising awareness, and driving meaningful engagement around neurodivergent women's issues.</p>
-          <a href="#partner-form" class="card-cta">Get Started</a>
-        </div>
-
-        <div class="info-card info-light">
-          <div class="info-icon">🔬</div>
-          <h3>Research &amp; Policy Collaboration</h3>
-          <p>Help fund our research initiatives or help us lobby for policy change — shaping evidence-based outcomes for neurodivergent women everywhere.</p>
-          <a href="#partner-form" class="card-cta">Get Started</a>
-        </div>
-
+        <button class="carousel-btn prev" id="partnerPrevA" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="partnerNextA" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="partnerDotsA"></div>
       </div>
-      <button class="carousel-btn prev" id="partnerPrevA" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="partnerNextA" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="partnerDotsA"></div>
     </div>
 
-    <!-- Style B: #A8B5A2 / #F7F5F2 -->
-    <div class="style-label reveal-up" style="margin-top:3.5rem;">Style B — #A8B5A2 background · #F7F5F2 text</div>
-    <div class="carousel-wrapper reveal-up">
-      <div class="carousel-track" id="partnerTrackB">
+    <!-- Style B — #A8B5A2 / #F7F5F2 text (no hover) -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style B — Sage</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="partnerTrackB">
 
-        <div class="info-card info-green">
-          <div class="info-icon">🎪</div>
-          <h3>Event Sponsorship</h3>
-          <p>Help us scale across the UK and beyond. If you have offices in multiple countries then help us launch an event in each country. Your support here will be a massive help in supporting neurodivergent women.</p>
-          <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
+          <div class="info-card info-green">
+            <h3>Event Sponsorship</h3>
+            <p>Help us scale across the UK and beyond. If you have offices in multiple countries then help us launch an event in each country. Your support here will be a massive help in supporting neurodivergent women.</p>
+            <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
+          </div>
+
+          <div class="info-card info-green">
+            <h3>Workshop and Program Partnerships</h3>
+            <!-- TODO: Add description from brief -->
+            <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
+          </div>
+
+          <div class="info-card info-green">
+            <h3>Amplifying Our Mission on Social Media</h3>
+            <!-- TODO: Add description from brief -->
+            <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
+          </div>
+
+          <div class="info-card info-green">
+            <h3>Research and Policy Collaboration</h3>
+            <p>Help fund our research initiatives or help us lobby for policy change.</p>
+            <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
+          </div>
+
         </div>
-
-        <div class="info-card info-green">
-          <div class="info-icon">🛠</div>
-          <h3>Workshop &amp; Programme Partnerships</h3>
-          <p>Co-create and deliver workshops and programmes that bring your expertise directly to neurodivergent women, their employers, and healthcare providers.</p>
-          <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
-        </div>
-
-        <div class="info-card info-green">
-          <div class="info-icon">📱</div>
-          <h3>Amplifying Our Mission on Social Media</h3>
-          <p>Use your platform to reach thousands — sharing stories, raising awareness, and driving meaningful engagement around neurodivergent women's issues.</p>
-          <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
-        </div>
-
-        <div class="info-card info-green">
-          <div class="info-icon">🔬</div>
-          <h3>Research &amp; Policy Collaboration</h3>
-          <p>Help fund our research initiatives or help us lobby for policy change — shaping evidence-based outcomes for neurodivergent women everywhere.</p>
-          <a href="#partner-form" class="card-cta card-cta-on-green">Get Started</a>
-        </div>
-
+        <button class="carousel-btn prev" id="partnerPrevB" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="partnerNextB" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="partnerDotsB"></div>
       </div>
-      <button class="carousel-btn prev" id="partnerPrevB" aria-label="Previous">&#8592;</button>
-      <button class="carousel-btn next" id="partnerNextB" aria-label="Next">&#8594;</button>
-      <div class="carousel-dots" id="partnerDotsB"></div>
     </div>
+
+    <!-- Style C — Image cards with hover -->
+    <div class="style-group reveal-up">
+      <div class="style-group-label">Style C — Image Cards</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="partnerTrackC">
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b5060">
+              <span class="s3-ph">Image: partner-sponsorship.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Event Sponsorship</h3>
+                <p>Help us scale across the UK and beyond. If you have offices in multiple countries then help us launch an event in each country. Your support here will be a massive help in supporting neurodivergent women.</p>
+                <a href="#partner-form" class="card-cta">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#4d6b5a">
+              <span class="s3-ph">Image: partner-workshops.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Workshop and Program Partnerships</h3>
+                <!-- TODO: Add description from brief -->
+                <a href="#partner-form" class="card-cta">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#5a4d6b">
+              <span class="s3-ph">Image: partner-social-media.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Amplifying Our Mission on Social Media</h3>
+                <!-- TODO: Add description from brief -->
+                <a href="#partner-form" class="card-cta">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="s3-card">
+            <div class="s3-img" style="--ph:#6b604d">
+              <span class="s3-ph">Image: partner-research.jpg</span>
+              <div class="s3-overlay"></div>
+              <div class="s3-body">
+                <h3>Research and Policy Collaboration</h3>
+                <p>Help fund our research initiatives or help us lobby for policy change.</p>
+                <a href="#partner-form" class="card-cta">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-btn prev" id="partnerPrevC" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" id="partnerNextC" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots" id="partnerDotsC"></div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════
-       PARTNER FORM  (gold border — C8A96A)
+       PARTNER FORM (gold border — C8A96A)
   ════════════════════════════════════════ -->
   <section class="signup-section partner-form-wrap" id="partner-form">
     <div class="signup-bg">
       <div class="signup-orb s1"></div>
       <div class="signup-orb s2"></div>
     </div>
-    <div class="signup-inner partner-form-inner reveal-up">
-      <div class="section-tag">Get In Touch</div>
-      <h2>Start the Conversation</h2>
-      <p>Fill in your details and we'll be in touch within 48 hours.</p>
-
+    <div class="partner-form-inner reveal-up">
+      <h2>Partner With Us</h2>
       <form class="partner-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="pname">Full Name</label>
-            <input type="text" id="pname" name="name" placeholder="Your Name" required class="form-input" />
-          </div>
-          <div class="form-group">
-            <label for="job">Job Title</label>
-            <input type="text" id="job" name="job_title" placeholder="Your Role" required class="form-input" />
-          </div>
+        <div class="form-group">
+          <label for="pname">Name</label>
+          <input type="text" id="pname" name="name" placeholder="Your Name" required class="form-input" />
         </div>
         <div class="form-group">
-          <label for="company">Company / Organisation</label>
-          <input type="text" id="company" name="company" placeholder="Your Organisation" required class="form-input" />
+          <label for="job">Job Title</label>
+          <input type="text" id="job" name="job_title" placeholder="Your Job Title" required class="form-input" />
         </div>
         <div class="form-group">
-          <label for="pemail">Email Address</label>
-          <input type="email" id="pemail" name="email" placeholder="your@email.com" required class="form-input" />
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" placeholder="Your Company Name" required class="form-input" />
         </div>
         <div class="form-group">
           <label for="partnership">How Would You Like to Help?</label>
           <select id="partnership" name="partnership_type" required class="form-input form-select">
             <option value="" disabled selected>Select a partnership type</option>
-            <option value="event">Event Sponsorship</option>
-            <option value="workshop">Workshop &amp; Programme Partnership</option>
-            <option value="social">Amplifying Our Mission on Social Media</option>
-            <option value="research">Research &amp; Policy Collaboration</option>
-            <option value="other">Other</option>
+            <option value="event-sponsorship">Event Sponsorship</option>
+            <option value="workshop-programs">Workshop and Program Partnerships</option>
+            <option value="social-media">Amplifying Our Mission on Social Media</option>
+            <option value="research-policy">Research and Policy Collaboration</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="message">Tell Us More (Optional)</label>
-          <textarea id="message" name="message" placeholder="Share your ideas, goals, or any questions..." class="form-input form-textarea" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn-signup-gold" style="width:100%;">Submit Partnership Enquiry</button>
+        <button type="submit" class="btn-signup-gold" style="width:100%;">Submit</button>
       </form>
-
-      <p class="signup-note" style="margin-top:1.5rem;">
-        Or email us directly:
-        <a href="mailto:partnerships@spectrum-education.co.uk" style="color:var(--gold);text-decoration:underline;">
+      <p style="margin-top:1.5rem;font-size:.82rem;color:rgba(214,210,204,.55);">
+        Email:
+        <a href="mailto:partnerships@spectrum-education.co.uk" class="footer-email">
           partnerships@spectrum-education.co.uk
         </a>
       </p>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       CLOSING STATEMENT
-  ════════════════════════════════════════ -->
+  <!-- CLOSING STATEMENT -->
   <section class="closing-section">
     <div class="closing-inner reveal-up">
       <blockquote class="closing-quote">
-        "This is more than an event; it is a platform for systemic improvement. Together, we can create safer, fairer, and more equitable systems for women on the spectrum."
+        This is more than an event; it is a platform for systemic improvement. Together, we can create safer, fairer, and more equitable systems for women on the spectrum.
       </blockquote>
-      <div class="closing-ctas">
-        <a href="#partner-form" class="btn-primary">Partner Now</a>
-        <a href="index.html#signup" class="btn-ghost">Join the Community</a>
-      </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="footer-logo">Women on the Spectrum</span>
-        <p>Enabling neurodivergent women to thrive.</p>
         <a href="mailto:partnerships@spectrum-education.co.uk" class="footer-email">
           partnerships@spectrum-education.co.uk
         </a>
