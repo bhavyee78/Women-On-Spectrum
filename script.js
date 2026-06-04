@@ -153,6 +153,18 @@ initCarousel('partnerTrackA', 'partnerPrevA', 'partnerNextA', 'partnerDotsA', '.
 initCarousel('partnerTrackB', 'partnerPrevB', 'partnerNextB', 'partnerDotsB', '.info-card');
 initCarousel('partnerTrackC', 'partnerPrevC', 'partnerNextC', 'partnerDotsC', '.s3-card');
 
+/* ── PARTNER HERO SLIDESHOW ──────────────── */
+(function () {
+  const slides = document.querySelectorAll('.phg-slide');
+  if (!slides.length) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+})();
+
 /* ── MOBILE TAP-TO-EXPAND — Services Style C image cards ── */
 (function () {
   const isTouchOnly = () => window.matchMedia('(hover: none)').matches;

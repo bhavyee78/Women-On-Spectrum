@@ -158,6 +158,52 @@ section { padding: 6rem 5vw; }
   max-width: 820px;
   width: 100%;
 }
+.hero-sub {
+  color: rgba(247,245,242,.88);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: .01em;
+  text-shadow: 0 1px 10px rgba(0,0,0,.5);
+  margin: 0;
+}
+.hero-slogan {
+  color: #A8B5A2;
+  font-size: clamp(.95rem, 1.8vw, 1.15rem);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: .03em;
+  text-shadow: 0 1px 10px rgba(0,0,0,.5);
+  margin: 0;
+}
+
+/* ── PARTNER INTRO ───────────────────────── */
+.partner-intro-section {
+  background: #4A3F45;
+  padding: 3rem 5vw 4rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.partner-intro-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.partner-intro-text {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #D6D2CC;
+  line-height: 1.75;
+  margin: 0;
+}
+.partner-intro-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 /* ── SCROLL REVEALS ──────────────────────── */
 .reveal-up   { opacity: 0; transform: translateY(36px); transition: opacity .6s ease, transform .6s ease; }
@@ -443,10 +489,32 @@ section { padding: 6rem 5vw; }
 .footer-bottom p { font-size: .78rem; color: rgba(214,210,204,.35); }
 
 /* ── PARTNER PAGE ────────────────────────── */
-.partner-hero { min-height: 70vh; }
-.partner-hero .hero-content { justify-content: center; }
-.partner-hero .hero-sub { color: #D6D2CC; font-size: 1.1rem; max-width: 560px; margin: 0 auto; }
 .partner-options-section { background: #4A3F45; }
+
+/* Partner hero — image slideshow */
+.partner-hero-gallery {
+  position: relative;
+  height: 72vh;
+  min-height: 420px;
+  overflow: hidden;
+  background: #4A3F45;
+  margin-top: 62px; /* clear fixed navbar */
+}
+.phg-slide {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+.phg-slide.active { opacity: 1; }
+.phg-fade-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, transparent 0%, #4A3F45 100%);
+  z-index: 2;
+  pointer-events: none;
+}
 
 .partner-form { display: flex; flex-direction: column; gap: 1.2rem; text-align: left; }
 .partner-form-wrap { background: #4A3F45; }
