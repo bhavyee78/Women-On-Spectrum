@@ -81,8 +81,19 @@ function initCarousel(trackId, prevId, nextId, dotsId, cardSelector) {
   const maxIndex = () => Math.max(0, cards.length - visibleCount());
 
   const buildDots = () => {
+    const noScroll = maxIndex() === 0;
+
+    /* show/hide arrows */
+    if (prevBtn) prevBtn.style.display = noScroll ? 'none' : '';
+    if (nextBtn) nextBtn.style.display = noScroll ? 'none' : '';
+
+    /* center track when all cards fit, scroll from left otherwise */
+    track.style.justifyContent = noScroll ? 'center' : '';
+    if (noScroll) { currentIndex = 0; track.style.transform = 'translateX(0)'; }
+
     if (!dotsContainer) return;
     dotsContainer.innerHTML = '';
+    if (noScroll) return;
     for (let i = 0; i <= maxIndex(); i++) {
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
@@ -128,19 +139,49 @@ function initCarousel(trackId, prevId, nextId, dotsId, cardSelector) {
 /* Services */
 initCarousel('servicesTrackA', 'servicesPrevA', 'servicesNextA', 'servicesDotsA', '.info-card');
 initCarousel('servicesTrackB', 'servicesPrevB', 'servicesNextB', 'servicesDotsB', '.info-card');
-initCarousel('servicesTrackC', 'servicesPrevC', 'servicesNextC', 'servicesDotsC', '.s3-card');
+initCarousel('servicesTrackC', 'servicesPrevC', 'servicesNextC', 'servicesDotsC', '.ic-card');
 /* Why This Is Needed */
 initCarousel('whyTrackA', 'whyPrevA', 'whyNextA', 'whyDotsA', '.info-card');
 initCarousel('whyTrackB', 'whyPrevB', 'whyNextB', 'whyDotsB', '.info-card');
-initCarousel('whyTrackC', 'whyPrevC', 'whyNextC', 'whyDotsC', '.s3-card');
+initCarousel('whyTrackC', 'whyPrevC', 'whyNextC', 'whyDotsC', '.ic-card');
 /* How We Help */
 initCarousel('howTrackA', 'howPrevA', 'howNextA', 'howDotsA', '.info-card');
 initCarousel('howTrackB', 'howPrevB', 'howNextB', 'howDotsB', '.info-card');
-initCarousel('howTrackC', 'howPrevC', 'howNextC', 'howDotsC', '.s3-card');
+initCarousel('howTrackC', 'howPrevC', 'howNextC', 'howDotsC', '.ic-card');
 /* Partner With Us (partner.html) */
 initCarousel('partnerTrackA', 'partnerPrevA', 'partnerNextA', 'partnerDotsA', '.info-card');
 initCarousel('partnerTrackB', 'partnerPrevB', 'partnerNextB', 'partnerDotsB', '.info-card');
 initCarousel('partnerTrackC', 'partnerPrevC', 'partnerNextC', 'partnerDotsC', '.s3-card');
+
+/* ── MOBILE TAP-TO-EXPAND — Services Style C image cards ── */
+(function () {
+  const isTouchOnly = () => window.matchMedia('(hover: none)').matches;
+
+  function initImageCardTap(trackId) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    track.querySelectorAll('.ic-card').forEach(card => {
+      card.addEventListener('click', e => {
+        if (!isTouchOnly()) return;
+        const isExpanded = card.classList.contains('expanded');
+        track.querySelectorAll('.ic-card.expanded').forEach(c => c.classList.remove('expanded'));
+        if (!isExpanded) card.classList.add('expanded');
+      });
+    });
+  }
+
+  initImageCardTap('servicesTrackC');
+  initImageCardTap('whyTrackC');
+  initImageCardTap('howTrackC');
+
+  /* collapse on tap outside */
+  document.addEventListener('click', e => {
+    if (!isTouchOnly()) return;
+    if (!e.target.closest('.ic-card')) {
+      document.querySelectorAll('.ic-card.expanded').forEach(c => c.classList.remove('expanded'));
+    }
+  });
+})();
 
 /* ── MODAL ───────────────────────────────── */
 const modalOverlay = document.getElementById('modalOverlay');
