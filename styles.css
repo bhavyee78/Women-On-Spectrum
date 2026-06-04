@@ -123,15 +123,16 @@ section { padding: 6rem 5vw; }
   overflow: hidden;
   background: #4A3F45;
 }
-.hero-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.6s ease;
   z-index: 0;
 }
+.hero-slide.active { opacity: 1; }
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
