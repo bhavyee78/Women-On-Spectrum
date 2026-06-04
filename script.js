@@ -153,6 +153,48 @@ initCarousel('partnerTrackA', 'partnerPrevA', 'partnerNextA', 'partnerDotsA', '.
 initCarousel('partnerTrackB', 'partnerPrevB', 'partnerNextB', 'partnerDotsB', '.info-card');
 initCarousel('partnerTrackC', 'partnerPrevC', 'partnerNextC', 'partnerDotsC', '.s3-card');
 
+/* ── PARTNER CARD MODALS ─────────────────── */
+(function () {
+  const overlay  = document.getElementById('partnerModalOverlay');
+  if (!overlay) return;
+
+  const titleEl  = document.getElementById('partnerModalTitle');
+  const bodyEl   = document.getElementById('partnerModalBody');
+  const closeBtn = document.getElementById('partnerModalClose');
+  const ctaBtn   = document.getElementById('partnerModalCta');
+
+  const openModal = (title, contentHTML) => {
+    titleEl.textContent = title;
+    bodyEl.innerHTML    = contentHTML;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeModal = () => {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.partner-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card    = btn.closest('.partner-card');
+      const title   = card.querySelector('h3').textContent;
+      const content = card.querySelector('.partner-full-content').innerHTML;
+      openModal(title, content);
+    });
+  });
+
+  closeBtn && closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  ctaBtn && ctaBtn.addEventListener('click', () => {
+    closeModal();
+    setTimeout(() => {
+      document.querySelector('#partner-form')?.scrollIntoView({ behavior: 'smooth' });
+    }, 320);
+  });
+})();
+
 /* ── PARTNER HERO SLIDESHOW ──────────────── */
 (function () {
   const slides = document.querySelectorAll('.phg-slide');
