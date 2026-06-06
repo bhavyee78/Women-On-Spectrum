@@ -123,13 +123,6 @@ section { padding: 6rem 5vw; }
   overflow: hidden;
   background: #4A3F45;
 }
-
-/* Slides wrapper — fills hero on desktop */
-.hero-slides-wrap {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
 .hero-slide {
   position: absolute; inset: 0;
   background-size: cover;
@@ -137,11 +130,12 @@ section { padding: 6rem 5vw; }
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1.6s ease;
+  z-index: 0;
 }
 .hero-slide.active { opacity: 1; }
 .hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(74,63,69,.52);
   z-index: 1;
 }
@@ -157,35 +151,6 @@ section { padding: 6rem 5vw; }
   text-align: center;
   padding: 120px 5vw 7rem;
   gap: 2rem;
-}
-
-/* ── HERO MOBILE — split layout ──────────── */
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-  }
-  .hero-slides-wrap {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .hero-overlay { display: none; }
-  .hero-content {
-    position: relative;
-    min-height: auto;
-    padding: 2.5rem 6vw 3rem;
-    background: #4A3F45;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    margin-top: 0;
-  }
 }
 .hero-title {
   color: #F7F5F2;
