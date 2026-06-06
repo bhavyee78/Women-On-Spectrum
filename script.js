@@ -138,22 +138,34 @@ function initCarousel(trackId, prevId, nextId, dotsId, cardSelector) {
 }
 
 /* ── INIT ALL CAROUSELS ──────────────────── */
-/* Services */
-initCarousel('servicesTrackA', 'servicesPrevA', 'servicesNextA', 'servicesDotsA', '.info-card');
-initCarousel('servicesTrackB', 'servicesPrevB', 'servicesNextB', 'servicesDotsB', '.info-card');
 initCarousel('servicesTrackC', 'servicesPrevC', 'servicesNextC', 'servicesDotsC', '.ic-card');
-/* Why This Is Needed */
-initCarousel('whyTrackA', 'whyPrevA', 'whyNextA', 'whyDotsA', '.info-card');
-initCarousel('whyTrackB', 'whyPrevB', 'whyNextB', 'whyDotsB', '.info-card');
-initCarousel('whyTrackC', 'whyPrevC', 'whyNextC', 'whyDotsC', '.ic-card');
-/* How We Help */
-initCarousel('howTrackA', 'howPrevA', 'howNextA', 'howDotsA', '.info-card');
-initCarousel('howTrackB', 'howPrevB', 'howNextB', 'howDotsB', '.info-card');
-initCarousel('howTrackC', 'howPrevC', 'howNextC', 'howDotsC', '.ic-card');
-/* Partner With Us (partner.html) */
-initCarousel('partnerTrackA', 'partnerPrevA', 'partnerNextA', 'partnerDotsA', '.info-card');
-initCarousel('partnerTrackB', 'partnerPrevB', 'partnerNextB', 'partnerDotsB', '.info-card');
-initCarousel('partnerTrackC', 'partnerPrevC', 'partnerNextC', 'partnerDotsC', '.s3-card');
+initCarousel('whyTrackC',      'whyPrevC',      'whyNextC',      'whyDotsC',      '.ic-card');
+initCarousel('howTrackC',      'howPrevC',      'howNextC',      'howDotsC',      '.ic-card');
+initCarousel('partnerTrackA',  'partnerPrevA',  'partnerNextA',  'partnerDotsA',  '.info-card');
+
+/* ── QUOTES IMAGE CAROUSEL ───────────────── */
+(function () {
+  const slides = document.querySelectorAll('.qic-slide');
+  if (!slides.length) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+})();
+
+/* ── QUOTES TEXT CAROUSEL ────────────────── */
+(function () {
+  const slides = document.querySelectorAll('.qtc-slide');
+  if (!slides.length) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3500);
+})();
 
 /* ── PARTNER CARD MODALS ─────────────────── */
 (function () {
