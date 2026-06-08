@@ -274,6 +274,21 @@ modalClose   && modalClose.addEventListener('click', closeModal);
 modalOverlay && modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
+/* ── REQUIRED CHECKBOX GROUPS ────────────── */
+document.querySelectorAll('[data-required-checkbox-group]').forEach(group => {
+  const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+  if (!checkboxes.length) return;
+
+  const validate = () => {
+    const hasSelection = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    checkboxes[0].setCustomValidity(hasSelection ? '' : 'Please choose at least one area of interest.');
+  };
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('change', validate));
+  group.closest('form')?.addEventListener('reset', () => setTimeout(validate));
+  validate();
+});
+
 /* ── FORM FEEDBACK ───────────────────────── */
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', async e => {

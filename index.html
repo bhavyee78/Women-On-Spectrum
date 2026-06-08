@@ -304,13 +304,25 @@
           <input type="tel" name="phone" placeholder="Phone Number (optional)" class="form-input" />
         </div>
         <div class="form-row">
-          <select name="area_of_interest" required class="form-input form-select">
-            <option type checkvalue="" disabled selected>Area of Interest</option>
-            <option value="wellbeing">Wellbeing</option>
-            <option value="careers">Careers</option>
-            <option value="community">Community</option>
-            <option value="training">Training</option>
-          </select>
+          <fieldset class="interest-group" data-required-checkbox-group>
+            <legend>Area of Interest</legend>
+            <label class="interest-option">
+              <input type="checkbox" name="area_of_interest[]" value="wellbeing" />
+              <span>Wellbeing</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="area_of_interest[]" value="careers" />
+              <span>Careers</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="area_of_interest[]" value="community" />
+              <span>Community</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="area_of_interest[]" value="training" />
+              <span>Training</span>
+            </label>
+          </fieldset>
           <select name="how_heard" required class="form-input form-select">
             <option value="" disabled selected>How Did You Hear About Us?</option>
             <option value="social-media">Social Media</option>
@@ -364,13 +376,25 @@
         <input type="email" name="email" placeholder="Your Email" required class="form-input" />
         <input type="number" name="age" placeholder="Your Age" min="1" max="120" required class="form-input" />
         <input type="tel" name="phone" placeholder="Phone Number (optional)" class="form-input" />
-        <select name="area_of_interest" required class="form-input form-select">
-          <option value="" disabled selected>Area of Interest</option>
-          <option value="wellbeing">Wellbeing</option>
-          <option value="careers">Careers</option>
-          <option value="community">Community</option>
-          <option value="training">Training</option>
-        </select>
+        <fieldset class="interest-group" data-required-checkbox-group>
+          <legend>Area of Interest</legend>
+          <label class="interest-option">
+            <input type="checkbox" name="area_of_interest[]" value="wellbeing" />
+            <span>Wellbeing</span>
+          </label>
+          <label class="interest-option">
+            <input type="checkbox" name="area_of_interest[]" value="careers" />
+            <span>Careers</span>
+          </label>
+          <label class="interest-option">
+            <input type="checkbox" name="area_of_interest[]" value="community" />
+            <span>Community</span>
+          </label>
+          <label class="interest-option">
+            <input type="checkbox" name="area_of_interest[]" value="training" />
+            <span>Training</span>
+          </label>
+        </fieldset>
         <select name="how_heard" required class="form-input form-select">
           <option value="" disabled selected>How Did You Hear About Us?</option>
           <option value="social-media">Social Media</option>
