@@ -123,16 +123,13 @@ section { padding: 6rem 5vw; }
   overflow: hidden;
   background: #4A3F45;
 }
-.hero-slide {
+.hero-video {
   position: absolute; inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1.6s ease;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
 }
-.hero-slide.active { opacity: 1; }
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -250,6 +247,7 @@ section { padding: 6rem 5vw; }
   min-width: 300px; max-width: 300px; flex-shrink: 0;
   border-radius: var(--radius); padding: 1.75rem;
   display: flex; flex-direction: column; gap: .4rem;
+  position: relative;
 }
 
 /* Style A — #FFFFFF bg, #4A3F45 text */
@@ -563,11 +561,21 @@ section { padding: 6rem 5vw; }
   justify-content: space-between;
 }
 .partner-tagline {
-  color: rgba(247,245,242,.75);
+  color: rgba(74,63,69,.65);
   font-style: italic;
   font-size: .95rem;
   flex-grow: 1;
   margin: 0;
+}
+.card-number {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(74,63,69,.25);
+  line-height: 1;
+  pointer-events: none;
 }
 .partner-modal-btn { align-self: flex-start; margin-top: auto; }
 
