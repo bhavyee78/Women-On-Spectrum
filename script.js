@@ -2,6 +2,18 @@
    WOMEN ON THE SPECTRUM — SCRIPT
    ============================================================ */
 
+/* ── HERO IMAGE SLIDESHOW ────────────────── */
+(function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+})();
+
 /* ── NAVBAR SCROLL STATE ─────────────────── */
 const navbar = document.getElementById('navbar');
 if (navbar) {
