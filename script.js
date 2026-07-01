@@ -289,6 +289,16 @@ document.querySelectorAll('[data-required-checkbox-group]').forEach(group => {
   validate();
 });
 
+/* ── "OTHER" INTEREST TEXTBOX TOGGLE ─────── */
+document.querySelectorAll('.interest-other-checkbox').forEach(checkbox => {
+  const box = checkbox.closest('fieldset')?.querySelector('.interest-other-box');
+  if (!box) return;
+  checkbox.addEventListener('change', () => {
+    box.hidden = !checkbox.checked;
+    if (!checkbox.checked) box.value = '';
+  });
+});
+
 /* ── FORM FEEDBACK ───────────────────────── */
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', async e => {

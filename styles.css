@@ -500,6 +500,7 @@ section { padding: 6rem 5vw; }
 .interest-option:last-child { margin-bottom: 0; }
 .interest-option input { accent-color: #C8A96A; }
 .form-textarea { resize: vertical; min-height: 95px; }
+.interest-other-box { margin-top: .6rem; min-height: 60px; }
 .form-group { display: flex; flex-direction: column; gap: .35rem; }
 .form-group label { font-size: .82rem; color: #A8B5A2; font-weight: 500; text-align: left; }
 
