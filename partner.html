@@ -158,15 +158,34 @@
           <input type="text" id="company" name="company" placeholder="Your Company Name" required class="form-input" />
         </div>
         <div class="form-group">
-          <label for="partnership">How Would You Like to Help?</label>
-          <select id="partnership" name="partnership_type" required class="form-input form-select">
-            <option value="" disabled selected>Select a partnership type</option>
-            <option value="event-sponsorship">Event Sponsorship</option>
-            <option value="careers">Careers</option>
-            <option value="wellbeing">Wellbeing Programme</option>
-            <option value="social-media">Social Media, Branding &amp; Campaign Collaborations</option>
-            <option value="research">Research &amp; Insight Collaborations</option>
-          </select>
+          <fieldset class="interest-group" data-required-checkbox-group>
+            <legend>How Would You Like to Help?</legend>
+            <label class="interest-option">
+              <input type="checkbox" name="partnership_type[]" value="Event Sponsorship" />
+              <span>Event Sponsorship</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="partnership_type[]" value="Careers" />
+              <span>Careers</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="partnership_type[]" value="Wellbeing Programme" />
+              <span>Wellbeing Programme</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="partnership_type[]" value="Social Media, Branding & Campaign Collaborations" />
+              <span>Social Media, Branding &amp; Campaign Collaborations</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="partnership_type[]" value="Research & Insight Collaborations" />
+              <span>Research &amp; Insight Collaborations</span>
+            </label>
+            <label class="interest-option">
+              <input type="checkbox" name="partnership_type[]" value="Other" class="interest-other-checkbox" />
+              <span>Other</span>
+            </label>
+            <textarea name="partnership_type_other" class="form-input form-textarea interest-other-box" placeholder="Tell us more…" aria-label="Tell us more about how you'd like to help" hidden></textarea>
+          </fieldset>
         </div>
         <button type="submit" class="btn-signup-gold" style="width:100%;">Submit</button>
       </form>

@@ -281,7 +281,7 @@ document.querySelectorAll('[data-required-checkbox-group]').forEach(group => {
 
   const validate = () => {
     const hasSelection = Array.from(checkboxes).some(checkbox => checkbox.checked);
-    checkboxes[0].setCustomValidity(hasSelection ? '' : 'Please choose at least one area of interest.');
+    checkboxes[0].setCustomValidity(hasSelection ? '' : 'Please choose at least one option.');
   };
 
   checkboxes.forEach(checkbox => checkbox.addEventListener('change', validate));

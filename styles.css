@@ -392,6 +392,15 @@ section { padding: 6rem 5vw; }
   .ic-card.expanded .ic-title-bar { opacity: 0; }
 }
 
+/* How We Help — info card always visible, no hover animation */
+.how-section .ic-hover {
+  transform: translateY(0);
+  transition: none;
+}
+.how-section .ic-title-bar { display: none; }
+.how-section .ic-img { transition: none; }
+.how-section .ic-card:hover .ic-img { transform: none; }
+
 /* ── SECTIONS ────────────────────────────── */
 .services-section { padding-bottom: 2rem; }
 .quotes-section {
